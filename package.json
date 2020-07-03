@@ -1,0 +1,40 @@
+{
+  "name": "github-upstream-bugfixes",
+  "title": "GitHub Upstream BugFixes",
+  "version": "0.0.1",
+  "description": "A Style that fixes (some) known upstream GitHub issues",
+  "license": "MIT",
+  "author": "StylishThemes",
+  "repository": "GitHub-Upstream-BugFixes",
+  "homepage": "https://github.com/StylishThemes/GitHub-Upstream-BugFixes",
+  "bugs": {
+    "url": "https://github.com/StylishThemes/GitHub-Upstream-BugFixes/issues/new/choose"
+  },
+  "main": "github-upstream-bugfixes.user.css",
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-silverwind": "^14.0.1",
+    "perfectionist": "^2.4.0",
+    "versions": "^8.4.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "updates": "^10.2.15"
+  },
+  "scripts": {
+    "authors": "bash tools/authors.sh",
+    "clean": "npm run lintfix && npm run perfectionist && node tools/fix-perfectionist.js",
+    "eslint": "eslint --quiet --color tools/*.js",
+    "lint": "npm run eslint && npm run stylelint",
+    "major": "versions -p -C major *.user.css",
+    "minor": "versions -p -C minor *.user.css",
+    "patch": "versions -p -C patch *.user.css",
+    "perfectionist": "npx perfectionist github-upstream-bugfixes.user.css --indentSize 2 --maxAtRuleLength 250",
+    "stylelint": "stylelint --color -- github-upstream-bugfixes.user.css",
+    "lintfix": "stylelint --fix --color -- github-upstream-bugfixes.user.css",
+    "test": "npm run eslint && npm run stylelint",
+    "update": "updates -cu && npm install"
+  }
+}

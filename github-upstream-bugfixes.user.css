@@ -1,0 +1,70 @@
+/* ==UserStyle==
+@name         GitHub Dark Upstream Bug Fix
+@namespace    StylishThemes
+@version      0.0.1
+@description  A Style that fixes (some) known upstream GitHub issues
+@author       StylishThemes
+@homepageURL  https://github.com/StylishThemes/GitHub-Upstream-BugFixes
+@supportURL   https://github.com/StylishThemes/GitHub-Upstream-BugFixes/issues/new/choose
+@updateURL    https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.css
+@license      MIT
+@var checkbox fixrebasebtnborder  "PR rebase button border" 1
+@var checkbox fixresetfilteralign "Reset filter align" 1
+@var checkbox fixfiltericonalign  "Filter icon x align" 1
+@var checkbox fixgistsearch       "Fix Gist Search border" 1
+@var checkbox fiwikimediabutton   "Fix wiki media button" 1
+@var checkbox fixopenwithclihgt   "Fix open with CLI height" 1
+@preprocessor stylus
+==/UserStyle== */
+@-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\.)?github\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
+  /*
+   * upstream bug: Fix pr rebase button border on hover.
+   * URL: https://github.com/StylishThemes/GitHub-Dark/issues/1070
+  */
+  if fixrebasebtnborder {
+    .btn-group-rebase.border-right-0:hover {
+      border-right: 1px solid currentColor !important;
+    }
+    .btn.btn-group-rebase.border-right-0:hover {
+      border-right: 1px solid #484848 !important;
+    }
+    .branch-action-state-dirty .btn.btn-group-rebase.border-right-0:hover {
+      border-right: 1px solid #363636 !important;
+    }
+  }
+  if fixresetfilteralign {
+  /*
+   * upstream bug: Fix filter reset button in notificationsv2b vertical alignment within input.
+   * e.g. URL: https://github.com/notifications/beta?query=is%3Aunread
+  */
+    button .issues-reset-query-icon {
+      vertical-align: top;
+    }
+  }
+  /* https://github.com/marketplace?type=apps&verification=verified */
+  if fixfiltericonalign {
+    .filter-item.selected .octicon-x {
+      margin-top: 2px;
+    }
+  }
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/1121 */
+  if fixgistsearch {
+    .header-search-wrapper .form-control,
+    .header-search-wrapper .form-control:focus,
+    .header-search-wrapper .form-select.focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+  if fixwikimediabutton {
+    .gollum-editor-function-buttons .octicon.octicon-file-media[width="24"][height="24"] {
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+  if fixopenwithclihgt {
+    tab-container[style="width:310px; z-index:81"] {
+      min-height: 190px !important;
+    }
+  }
+}
