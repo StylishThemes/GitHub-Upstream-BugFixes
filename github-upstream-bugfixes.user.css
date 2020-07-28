@@ -31,14 +31,14 @@
    * URL: https://github.com/StylishThemes/GitHub-Dark/issues/1070
    */
   if fixrebasebtnborder {
-    .btn-group-rebase.btn-primary:hover {
-      border-right: 1px solid #484848 !important;
-    }
-    .btn-group-rebase.border-right-0:hover {
-      border-right-color: lighten(greencolor, 15%) !important;
-    }
     .branch-action-state-dirty .btn.btn-group-rebase.border-right-0:hover {
       border-right: 1px solid #363636 !important;
+    }
+		.branch-action-state-unstable .btn.btn-group-rebase.border-right-0:hover {
+      border-right: 1px solid #363636 !important;
+    }
+    .branch-action-state-clean .btn.btn-group-rebase.border-right-0:hover {
+      border-right: 1px solid lighten(greencolor, 15%) !important;
     }
   }
   if fixresetfilteralign {
