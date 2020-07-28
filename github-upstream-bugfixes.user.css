@@ -8,7 +8,7 @@
 @supportURL   https://github.com/StylishThemes/GitHub-Upstream-BugFixes/issues/new/choose
 @updateURL    https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.css
 @license      MIT
-@var color    greenColor          "Color" #373
+@var color    greencolor          "Color" #373
 @var checkbox fixrebasebtnborder  "PR rebase button border" 1
 @var checkbox fixresetfilteralign "Reset filter align" 1
 @var checkbox fixfiltericonalign  "Filter icon x align" 1
@@ -22,6 +22,7 @@
 @var checkbox alignsummarystats   "Align summary stats" 1
 @var checkbox fixoverflows        "Fix overflows" 1
 @var checkbox fixorgrepotagbox    "Fix org repo tag container" 1
+@var checkbox fixtabindexoutl     "Fix tabindex outline" 1
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|docs|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$") {
@@ -29,16 +30,15 @@
    * upstream bug: Fix pr rebase button border on hover.
    * URL: https://github.com/StylishThemes/GitHub-Dark/issues/1070
    */
-  i = !important
   if fixrebasebtnborder {
     .btn-group-rebase.btn-primary:hover {
-      border-right: 1px solid #484848 i;
+      border-right: 1px solid #484848 !important;
     }
     .btn-group-rebase.border-right-0:hover {
-      border-right-color: lighten(greenColor, 15%) i;
+      border-right-color: lighten(greencolor, 15%) !important;
     }
     .branch-action-state-dirty .btn.btn-group-rebase.border-right-0:hover {
-      border-right: 1px solid #363636 i;
+      border-right: 1px solid #363636 !important;
     }
   }
   if fixresetfilteralign {
@@ -58,16 +58,16 @@
   }
   if fixwikimediabutton {
     .gollum-editor-function-buttons .octicon.octicon-file-media[width="24"][height="24"] {
-      width: 16px i;
-      height: 16px i;
+      width: 16px !important;
+      height: 16px !important;
     }
   }
   if fixopenwithclihgt {
     tab-container[style="width:310px; z-index:81"] {
-      min-height: 190px i;
+      min-height: 190px !important;
     }
   }
-  if fixopenwithclihgt {
+  if fixuserstuschkbox {
     #limited-availability-truncate-false-compact-false {
       margin: 0 0 0 -20px;
     }
@@ -78,9 +78,6 @@
         margin: 0 -210px;
       }
     }
-  }
-  .UnderlineNav-item:focus, .UnderlineNav-item:hover, [tabindex] {
-    outline: 0 solid transparent i;
   }
   if fixgistpagehead {
     #gist-pjax-container .pagehead ul.pagehead-actions {
@@ -107,20 +104,26 @@
     .integrations-select-repos {
       overflow-y: auto;
     }
-    .marketplace-billing-modal .overflow-scroll {
-      overflow: auto i;
+    .marketplace-billing-modal .overflow-scroll,
+    .check-annotation-failure .overflow-scroll {
+      overflow: auto !important;
     }
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixorgrepotagbox {
     .topic-input-container .tag-input.org-repo-tag-input {
-      padding-bottom: 6px i;
+      padding-bottom: 6px !important;
     }
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixgistdropdowrad {
     .gist-quicksearch-results {
       border-radius: 3px;
+    }
+  }
+  if fixtabindexoutl {
+    .UnderlineNav-item:focus, .UnderlineNav-item:hover, [tabindex] {
+      outline: 0 solid transparent !important;
     }
   }
 }
