@@ -23,6 +23,7 @@
 @var checkbox fixoverflows        "Fix overflows" 1
 @var checkbox fixorgrepotagbox    "Fix org repo tag container" 1
 @var checkbox fixtabindexoutl     "Fix tabindex outline" 1
+@var checkbox fixdnewbadgepad     "Fix dev new badge padding" 1
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|docs|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$") {
@@ -111,9 +112,12 @@
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixorgrepotagbox {
-    .topic-input-container .tag-input.org-repo-tag-input {
+    .topic-input-container .org-repo-tag-input {
       padding-bottom: 6px !important;
     }
+		.topic-input-container .tag-input-inner {
+			margin-top: 10px !important
+		}
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixgistdropdowrad {
@@ -124,6 +128,11 @@
   if fixtabindexoutl {
     .UnderlineNav-item:focus, .UnderlineNav-item:hover, [tabindex] {
       outline: 0 solid transparent !important;
+    }
+  }
+	if fixdnewbadgepad {
+    .text-mono.bg-blue.text-white.pt-1 {
+      padding-top: 0px !important;
     }
   }
 }
