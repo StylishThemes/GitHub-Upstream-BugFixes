@@ -15,7 +15,6 @@
 @var checkbox fiwikimediabutton   "Fix wiki media button" 1
 @var checkbox fixopenwithclihgt   "Fix open with CLI height" 1
 @var checkbox fixuserstuschkbox   "Fix user status checkbox" 1
-@var checkbox fixassigneemenu     "Fix assignee menu > 1000px" 1
 @var checkbox fixgistpagehead     "Fix gist page head" 1
 @var checkbox fixgistdropdowrad   "Fix gist search dropdown radius" 1
 @var checkbox fixgistsearchicon   "Fix gist search icon" 1
@@ -71,13 +70,6 @@
   if fixuserstuschkbox {
     #limited-availability-truncate-false-compact-false {
       margin: 0 0 0 -20px;
-    }
-  }
-  if fixassigneemenu {
-    @media screen and (min-width: 1200px) {
-      .SelectMenu.SelectMenu--hasFilter[src*="assigns_content"] {
-        margin: 0 -210px;
-      }
     }
   }
   if fixgistpagehead {
