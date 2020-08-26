@@ -15,13 +15,13 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
-    "eslint-config-silverwind": "^18.0.2",
+    "eslint": "^7.7.0",
+    "eslint-config-silverwind": "^18.0.5",
     "perfectionist": "^2.4.0",
-    "versions": "^8.4.2",
+    "versions": "^8.4.3",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
-    "updates": "^10.3.3"
+    "updates": "^10.3.5"
   },
   "scripts": {
     "authors": "bash tools/authors.sh",
