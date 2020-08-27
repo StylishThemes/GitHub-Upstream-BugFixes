@@ -23,6 +23,7 @@
 @var checkbox fixorgrepotagbox    "Fix org repo tag container" 1
 @var checkbox fixtabindexoutl     "Fix tabindex outline" 1
 @var checkbox fixdnewbadgepad     "Fix dev new badge padding" 1
+@var checkbox fixinlinetabnavt    "Fix inline tabnav" 1
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|docs|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$") {
@@ -126,6 +127,11 @@
 	if fixdnewbadgepad {
     .text-mono.bg-blue.text-white.pt-1 {
       padding-top: 0 !important;
+    }
+  }
+  if fixinlinetabnavt {
+    .inline-comment-form .tabnav-tabs {
+      margin-bottom: -7px !important;
     }
   }
 }
