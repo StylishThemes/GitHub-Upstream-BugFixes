@@ -34,7 +34,7 @@
     .branch-action-state-dirty .btn.btn-group-rebase.border-right-0:hover {
       border-right: 1px solid #363636 !important;
     }
-		.branch-action-state-unstable .btn.btn-group-rebase.border-right-0:hover {
+    .branch-action-state-unstable .btn.btn-group-rebase.border-right-0:hover {
       border-right: 1px solid #363636 !important;
     }
     .branch-action-state-clean .btn.btn-group-rebase.border-right-0:hover {
@@ -107,9 +107,9 @@
     .topic-input-container .org-repo-tag-input {
       padding-bottom: 6px !important;
     }
-		.topic-input-container .tag-input-inner {
-			margin-top: 10px !important;
-		}
+    .topic-input-container .tag-input-inner {
+      margin-top: 10px !important;
+    }
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixgistdropdowrad {
