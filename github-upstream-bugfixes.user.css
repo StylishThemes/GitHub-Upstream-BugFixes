@@ -124,7 +124,7 @@
     }
   }
   /* https://developer.github.com/ */
-	if fixdnewbadgepad {
+  if fixdnewbadgepad {
     .text-mono.bg-blue.text-white.pt-1 {
       padding-top: 0 !important;
     }
