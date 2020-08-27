@@ -146,10 +146,10 @@
   }
   if fixsidballowedits {
     .details-reset .btn-link.mt-1 {
-	    margin-top: 0 !important;
+      margin-top: 0 !important;
     }
     input[name="collab_privs"].mt-1 {
-	    margin-top: 2px !important;
+      margin-top: 2px !important;
     }
   }
 }
