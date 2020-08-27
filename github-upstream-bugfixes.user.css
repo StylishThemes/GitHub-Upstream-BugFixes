@@ -135,7 +135,7 @@
       margin-bottom: -7px !important;
     }
   }
-  if fixalloweditsalignNPR {
+  if fixalloweditalpr {
     .timeline-comment-wrapper.timeline-new-comment .my-md-2:not(.form-actions) {
       margin-top: -5px !important;
     }
