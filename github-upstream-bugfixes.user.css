@@ -24,6 +24,7 @@
 @var checkbox fixtabindexoutl     "Fix tabindex outline" 1
 @var checkbox fixdnewbadgepad     "Fix dev new badge padding" 1
 @var checkbox fixinlinetabnavt    "Fix inline tabnav" 1
+@var checkbox fixalloweditalpr    "Fix allow edits in new PR" 1
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|docs|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$") {
@@ -132,6 +133,14 @@
   if fixinlinetabnavt {
     .inline-comment-form .tabnav-tabs {
       margin-bottom: -7px !important;
+    }
+  }
+  if fixalloweditsalignNPR {
+    .timeline-comment-wrapper.timeline-new-comment .my-md-2:not(.form-actions) {
+      margin-top: -5px !important;
+    }
+    .timeline-comment-wrapper.timeline-new-comment .mx-md-3 {
+      margin-left: -8px !important;
     }
   }
 }
