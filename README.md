@@ -24,7 +24,7 @@
 ## About
 
 This style fixes some known GitHub issues that are left dangling unfixed for a long period.
-You can easilly turn the fix ON/OFF using the provided toggles to see issue or see if its been fixed.
+You can easily turn the fix ON/OFF using the provided toggles to see issue or see if its been fixed.
 
 ## Installation
 
