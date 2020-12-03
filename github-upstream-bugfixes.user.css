@@ -10,21 +10,13 @@
 @license      MIT
 @var color    greencolor          "Color" #373
 @var checkbox fixrebasebtnborder  "PR rebase button border" 1
-@var checkbox fixresetfilteralign "Reset filter align" 1
-@var checkbox fixfiltericonalign  "Filter icon x align" 1
-@var checkbox fiwikimediabutton   "Fix wiki media button" 1
-@var checkbox fixopenwithclihgt   "Fix open with CLI height" 1
 @var checkbox fixuserstuschkbox   "Fix user status checkbox" 1
-@var checkbox fixgistpagehead     "Fix gist page head" 1
 @var checkbox fixgistdropdowrad   "Fix gist search dropdown radius" 1
-@var checkbox fixgistsearchicon   "Fix gist search icon" 1
 @var checkbox alignsummarystats   "Align summary stats" 1
 @var checkbox fixoverflows        "Fix overflows" 1
 @var checkbox fixorgrepotagbox    "Fix org repo tag container" 1
 @var checkbox fixtabindexoutl     "Fix tabindex outline" 1
 @var checkbox fixdnewbadgepad     "Fix dev new badge padding" 1
-@var checkbox fixinlinetabnavt    "Fix inline tabnav" 1
-@var checkbox fixalloweditalpr    "Fix allow edits in new PR" 1
 @var checkbox fixsidballowedits   "Fix sidebar allow edits" 1
 @preprocessor stylus
 ==/UserStyle== */
@@ -34,55 +26,16 @@
    * URL: https://github.com/StylishThemes/GitHub-Dark/issues/1070
    */
   if fixrebasebtnborder {
-    .branch-action-state-dirty .btn.btn-group-rebase.border-right-0:hover {
+    .branch-action-state-dirty .btn.btn-group-rebase:hover {
       border-right: 1px solid #363636 !important;
     }
-    .branch-action-state-unstable .btn.btn-group-rebase.border-right-0:hover {
+    .branch-action-state-unstable .btn.btn-group-rebase:hover {
       border-right: 1px solid #363636 !important;
-    }
-    .branch-action-state-clean .btn.btn-group-rebase.border-right-0:hover {
-      border-right: 1px solid lighten(greencolor, 15%) !important;
-    }
-  }
-  if fixresetfilteralign {
-  /*
-   * upstream bug: Fix filter reset button in notificationsv2b vertical alignment within input.
-   * e.g. URL: https://github.com/notifications/beta?query=is%3Aunread
-   */
-    button .issues-reset-query-icon {
-      vertical-align: rgba(27,31,35,.15);
-    }
-  }
-  /* https://github.com/marketplace?type=apps&verification=verified */
-  if fixfiltericonalign {
-    .filter-item.selected .octicon-x {
-      margin-top: 2px;
-    }
-  }
-  if fixwikimediabutton {
-    .gollum-editor-function-buttons .octicon.octicon-file-media[width="24"][height="24"] {
-      width: 16px !important;
-      height: 16px !important;
-    }
-  }
-  if fixopenwithclihgt {
-    tab-container[style="width:310px; z-index:81"] {
-      min-height: 190px !important;
     }
   }
   if fixuserstuschkbox {
     #limited-availability-truncate-false-compact-false {
       margin: 0 0 0 -20px;
-    }
-  }
-  if fixgistpagehead {
-    #gist-pjax-container .pagehead ul.pagehead-actions {
-      margin-left: -5px;
-    }
-  }
-  if fixgistsearchicon {
-    .blob-interaction-bar .octicon-search {
-      top: 6px;
     }
   }
   /* https://git.io/JJlBV */
@@ -111,7 +64,7 @@
       padding-bottom: 6px !important;
     }
     .topic-input-container .tag-input-inner {
-      margin-top: 10px !important;
+      margin-top: 8px !important;
     }
   }
   /* https://github.com/orgs/StylishThemes/topics */
@@ -129,19 +82,6 @@
   if fixdnewbadgepad {
     .text-mono.bg-blue.text-white.pt-1 {
       padding-top: 0 !important;
-    }
-  }
-  if fixinlinetabnavt {
-    .inline-comment-form .tabnav-tabs {
-      margin-bottom: -7px !important;
-    }
-  }
-  if fixalloweditalpr {
-    .timeline-comment-wrapper.timeline-new-comment .my-md-2:not(.form-actions) {
-      margin-top: -5px !important;
-    }
-    .timeline-comment-wrapper.timeline-new-comment .mx-md-3 {
-      margin-left: -8px !important;
     }
   }
   if fixsidballowedits {
