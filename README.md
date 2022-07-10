@@ -10,9 +10,6 @@
   <a href="https://github.com/StylishThemes/GitHub-Upstream-BugFixes/fork">
     <img src="https://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Upstream-BugFixes&style=flat&background=007ec6" alt="Fork">
   </a>
-  <a href="https://david-dm.org/StylishThemes/GitHub-Upstream-BugFixes?type=dev">
-    <img src="https://img.shields.io/david/dev/StylishThemes/GitHub-Upstream-BugFixes.svg?label=%20devDependencies%20" alt="devDependencies">
-  </a>
   <a href="https://github.com/StylishThemes/GitHub-Upstream-BugFixes/actions">
     <img src="https://github.com/StylishThemes/GitHub-Upstream-BugFixes/workflows/CI/badge.svg" alt="BuildStatus">
   </a>
@@ -23,8 +20,11 @@
 
 ## About
 
-This style fixes some known GitHub issues that are left dangling unfixed for a long period.
+This style fixes some known GitHub issues that are left dangling unfixed for a long period of time.
 You can easily turn the fix ON/OFF using the provided toggles to see issue or see if its been fixed.
+
+If you notice that an issue has been fixed and know which, yet the code remains in style,
+please open a [new issue](https://github.com/StylishThemes/GitHub-Upstream-BugFixes/issues/new/choose) and report it so the relevant code can be removed from style.
 
 ## Installation
 
