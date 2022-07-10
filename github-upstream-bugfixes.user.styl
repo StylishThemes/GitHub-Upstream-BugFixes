@@ -3,12 +3,12 @@
 @namespace    StylishThemes
 @version      1.0.10
 @description  A Style that fixes (some) known upstream GitHub issues
-@author       StylishThemes
+@author       StylishThemes & contributors
 @homepageURL  https://github.com/StylishThemes/GitHub-Upstream-BugFixes
 @supportURL   https://github.com/StylishThemes/GitHub-Upstream-BugFixes/issues/new/choose
-@updateURL    https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.css
+@updateURL    https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.styl
 @license      MIT
-@var color    greencolor          "Color" #373
+
 @var checkbox fixrebasebtnborder  "PR rebase button border" 1
 @var checkbox fixuserstuschkbox   "Fix user status checkbox" 1
 @var checkbox fixgistdropdowrad   "Fix gist search dropdown radius" 1
@@ -20,51 +20,57 @@
 @var checkbox fixsidballowedits   "Fix sidebar allow edits" 1
 @preprocessor stylus
 ==/UserStyle== */
+i = !important
+t = transparent
 @-moz-document regexp("^https?://((gist|guides|docs|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$") {
   /*
    * upstream bug: Fix pr rebase button border on hover.
    * URL: https://github.com/StylishThemes/GitHub-Dark/issues/1070
    */
   if fixrebasebtnborder {
-    .branch-action-state-dirty .btn.btn-group-rebase:hover {
-      border-right: 1px solid #363636 !important;
-    }
-    .branch-action-state-unstable .btn.btn-group-rebase:hover {
-      border-right: 1px solid #363636 !important;
+    .btn-group-squash, .btn-group-rebase, .btn-group-merge {
+      border-top-right-radius: 0 i
+      border-bottom-right-radius: 0 i
     }
   }
   if fixuserstuschkbox {
     #limited-availability-truncate-false-compact-false {
-      margin: 0 0 0 -20px;
+      margin: 0 0 0 -20px
     }
   }
   /* https://git.io/JJlBV */
   if alignsummarystats {
     .summary-stats {
-      margin-top: 8px;
-      text-align: center;
+      margin-top: 8px
+      text-align: center
     }
   }
   /* https://github.com/marketplace/actions/test-action (click use latest version) */
   if fixoverflows {
-    .copyable-terminal [style="overflow-x: scroll;"] {
-      overflow-x: auto i;
+    .copyable-terminal [style*='overflow-x: scroll'] {
+      overflow: auto i
     }
     .integrations-select-repos {
-      overflow-y: auto;
+      overflow-y: auto
     }
     .marketplace-billing-modal .overflow-scroll,
     .check-annotation-failure .overflow-scroll {
-      overflow: auto !important;
+      overflow: auto i
+    }
+    .linejump {
+      overflow-y: hidden i
+    }
+    .Box-overlay--wide {
+      overflow-x: hidden i
     }
   }
   /* https://github.com/orgs/StylishThemes/topics */
   if fixorgrepotagbox {
     .topic-input-container .org-repo-tag-input {
-      padding-bottom: 6px !important;
+      padding-bottom: 6px i
     }
-    .topic-input-container .tag-input-inner {
-      margin-top: 8px !important;
+    .topic-input-container .tag-input {
+      padding: 8px i
     }
   }
   /* https://github.com/orgs/StylishThemes/topics */
@@ -75,21 +81,21 @@
   }
   if fixtabindexoutl {
     .UnderlineNav-item:focus, .UnderlineNav-item:hover, [tabindex] {
-      outline: 0 solid transparent !important;
+      outline: 0 solid t i
     }
   }
   /* https://developer.github.com/ */
   if fixdnewbadgepad {
     .text-mono.bg-blue.text-white.pt-1 {
-      padding-top: 0 !important;
+      padding-top: 0 i
     }
   }
   if fixsidballowedits {
-    .details-reset .btn-link.mt-1 {
-      margin-top: 0 !important;
+    .details-reset .btn-link.mt-1:not([aria-label='Editor setting']) {
+      margin-top: 0 i
     }
     input[name="collab_privs"].mt-1 {
-      margin-top: 2px !important;
+      margin-top: 2px i
     }
   }
 }
