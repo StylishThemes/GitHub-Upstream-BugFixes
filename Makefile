@@ -13,7 +13,7 @@ node_modules: package-lock.json
 	@touch node_modules
 
 lint: node_modules
-	npx stylelint --color src/**/*.styl
+	npx stylelint --color *.styl
 
 authors:
 	bash tools/authors.sh
