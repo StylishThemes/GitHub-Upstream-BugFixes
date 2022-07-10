@@ -13,14 +13,13 @@ node_modules: package-lock.json
 	@touch node_modules
 
 lint: node_modules
-	npx eslint --color src/gen tools
 	npx stylelint --color src/**/*.styl
 
 authors:
 	bash tools/authors.sh
 
 clean: node_modules
-	node tools/clean.js
+	node tools/fix-perfectionist.js
 
 install: node_modules
 	node tools/install.js
@@ -30,16 +29,4 @@ update: node_modules
 	npm install
 	@touch node_modules package-lock.json
 
-patch: node_modules lint
-	npx versions -pdC patch $(wildcard *.user.styl)
-	git push --tags origin master
-
-minor: node_modules lint
-	npx versions -pdC minor $(wildcard *.user.styl)
-	git push --tags origin master
-
-major: node_modules lint
-	npx versions -pdC major $(wildcard *.user.styll)
-	git push --tags origin master
-
-.PHONY: all test build deps lint authors clean install update patch minor major
+.PHONY: all test build deps lint authors clean install update
