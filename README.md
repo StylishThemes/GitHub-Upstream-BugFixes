@@ -34,7 +34,7 @@ A userstyle extension is required:
 
 Then:
 
-📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.css). It supports automatic updates.
+📦 [Install the style](https://github.com/StylishThemes/GitHub-Upstream-BugFixes/raw/master/github-upstream-bugfixes.user.styl). It supports automatic updates.
 
 ## Contributions
 
