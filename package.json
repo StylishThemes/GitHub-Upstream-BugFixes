@@ -12,7 +12,6 @@
   },
   "main": "github-upstream-bugfixes.user.styl",
   "private": true,
-  "type": "module",
   "engines": {
     "node": ">= 14.16.0"
   },
