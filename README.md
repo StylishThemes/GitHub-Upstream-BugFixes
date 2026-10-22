@@ -1,3 +1,5 @@
+**Retired:** no longer maintained.
+
 <h1 align="center">GitHub Upstream BugFixes</h1>
 <br>
 <p align="center">
